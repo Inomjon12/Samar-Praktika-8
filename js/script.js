@@ -34,6 +34,23 @@ slides.forEach(slide => {
 	slide.style.width = width;
 });
 
+slider.style.position = 'relative';
+let indicator = document.createElement('ol');
+indicator.style.cssText = `
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+
+
+z-index: 0;
+display: flex;
+justify-content: center;
+margin-right: 15%;
+margin-left: 15%;
+list-style: none;
+`
+
 // 6
 next.addEventListener('click', () => {
 	if (offset == (+width.slice(0, width.length - 2) * (slides.length - 1))) {
